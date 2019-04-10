@@ -9,7 +9,7 @@
         <div class="feat-cards" id="feat-items">
           <router-link
             v-for="item in featuredItems"
-            :to="'/catalog/' + item.id"
+            :to="'/catalog/item/' + item.id"
             class="feat-card"
             :data-id="item.id"
             :key="item.id"

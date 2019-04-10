@@ -19,13 +19,13 @@ export default {};
 @import "../../scss/variables";
 
 .breadcrumbs {
-  height: 150px;
+  height: 80px;
   background-color: #f8f3f4;
   h5 {
     color: $main-pink;
     font-family: "Lato";
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
   }
   li {

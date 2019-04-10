@@ -1,4 +1,4 @@
-# brand-shop
+# scent-shop
 
 ## Project setup
 ```
