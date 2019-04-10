@@ -3,7 +3,7 @@
     <div class="container">
       <ul class="menu">
         <li class="menu-list">
-          <a href="/" class="menu-link">Home</a>
+          <router-link to="/" class="menu-link">Home</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>WOMEN</h6>

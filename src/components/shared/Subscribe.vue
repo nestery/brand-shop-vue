@@ -2,7 +2,12 @@
   <section class="subscribe section">
     <div class="container container-nopadding flex">
       <div class="feedback-carousel">
-        <carousel :autoplay="true" :perPage="1" paginationActiveColor="#f16d7f">
+        <carousel
+          :autoplay="true"
+          :loop="true"
+          :perPage="1"
+          paginationActiveColor="#f16d7f"
+        >
           <slide>
             <div class="feedback">
               <img src="../../assets/feedback_phot01.jpg" alt="photo" />
