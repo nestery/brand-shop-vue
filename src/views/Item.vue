@@ -79,19 +79,20 @@
                 <h6 class="single-item-h6">QUANTITY</h6>
                 <input
                   type="number"
-                  value="1"
                   class="input-gray"
                   form="single-item-add"
                   v-model="quantity"
+                  @input="$v.$touch()"
                 />
               </div>
             </div>
             <div class="single-item-addbtn">
               <button
+                @click.prevent="buyItem"
                 type="submit"
                 class="btn-reverse"
                 form="single-item-add"
-                disabled
+                :disabled="$v.$error"
               >
                 <svg
                   width="26px"
@@ -116,14 +117,15 @@
         </div>
       </div>
     </section>
+    <app-also-like></app-also-like>
   </div>
 </template>
 
 <script>
 import Breadcrumbs from "../components/shared/Breadcrumbs";
+import AlsoLike from "../components/AlsoLike";
 import { Carousel, Slide } from "vue-carousel";
 import { mapGetters } from "vuex";
-import { required, minLength, between } from "vuelidate/lib/validators";
 export default {
   data() {
     return {
@@ -132,7 +134,12 @@ export default {
       quantity: 1
     };
   },
-  components: { Carousel, Slide, appBreadcrumbs: Breadcrumbs },
+  components: {
+    Carousel,
+    Slide,
+    appBreadcrumbs: Breadcrumbs,
+    appAlsoLike: AlsoLike
+  },
   props: ["id"],
   computed: {
     ...mapGetters(["catalog"]),
@@ -154,19 +161,33 @@ export default {
       return false;
     }
   },
+  actions: {
+    buyItem() {
+      const id = this.id;
+      const size = this.size;
+      const color = this.color;
+      const quantity = this.quantity;
+
+      const item = {
+        id,
+        size,
+        color,
+        quantity
+      };
+
+      this.$store.dispatch("addToCart", item);
+    }
+  },
   created() {
     this.color = this.colors[0];
     this.size = this.sizes[0];
   },
   validations: {
-    color: {
-      required,
-      minLength: minLength(4)
-    },
-    size: {
-      between: between(20, 30)
-    },
-    quantity: {}
+    quantity: {
+      min() {
+        return this.quantity > 0;
+      }
+    }
   }
 };
 </script>
@@ -258,9 +279,6 @@ export default {
 .text-black {
   color: #2f2f2f;
 }
-.m-r40 {
-  margin-right: 40px;
-}
 
 .single-item-price {
   color: $main-pink;
@@ -350,26 +368,24 @@ export default {
   font-size: 16px;
   font-weight: 700;
   color: $main-pink;
-  cursor: pointer;
   border: 1px solid $main-pink;
   background: #fff;
   transition: color, background 0.1s ease;
 }
 
 .btn-reverse:hover {
+  cursor: pointer;
   color: #fff;
   background: $main-pink;
 }
 
-.also-like {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  h5 {
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #4d4d4d;
-    text-align: center;
+.btn-reverse[disabled] {
+  cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  .cart-svg {
+    fill: #666666;
   }
 }
 </style>
