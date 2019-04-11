@@ -91,7 +91,6 @@
                 @click.prevent="buyItem"
                 type="submit"
                 class="btn-reverse"
-                form="single-item-add"
                 :disabled="$v.$error"
               >
                 <svg
@@ -161,12 +160,12 @@ export default {
       return false;
     }
   },
-  actions: {
+  methods: {
     buyItem() {
-      const id = this.id;
+      const id = +this.id;
       const size = this.size;
       const color = this.color;
-      const quantity = this.quantity;
+      const quantity = +this.quantity;
 
       const item = {
         id,

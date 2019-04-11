@@ -25,6 +25,7 @@ export default {
   },
   created() {
     this.$store.dispatch("setCatalog");
+    this.$store.dispatch("setCart");
   }
 };
 </script>
