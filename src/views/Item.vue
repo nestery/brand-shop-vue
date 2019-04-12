@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-breadcrumbs></app-breadcrumbs>
-    <section v-if="catalogLoaded" class="single-item section">
+    <section v-if="catalogLoaded" class="single-item section" id="start">
       <div class="single-item-slider">
         <div class="container">
           <carousel
