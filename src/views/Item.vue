@@ -176,32 +176,12 @@ export default {
 
       this.$store.dispatch("addToCart", item);
       this.$notify({
-        // (optional)
-        // Name of the notification holder
-        group: "foo",
-
-        // (optional)
-        // Class that will be assigned to the notification
-        type: "warn",
-
-        // (optional)
-        // Title (will be wrapped in div.notification-title)
-        title: "This is title",
-
-        // Content (will be wrapped in div.notification-content)
-        text: "This is <b> content </b>",
-
-        // (optional)
-        // Overrides default/provided duration
-        duration: 10000,
-
-        // (optional)
-        // Overrides default/provided animation speed
-        speed: 1000,
-
-        // (optional)
-        // Data object that can be used in your template
-        data: {}
+        group: "cart",
+        type: "cart-notification",
+        title: `${this.item.name} ADDED TO CART`,
+        text: `COLOR: ${this.color.toUpperCase()}<br>
+                        SIZE: ${this.size}<br>
+                        QUANTITY: ${this.quantity}`
       });
     }
   },
@@ -221,6 +201,14 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables";
+
+.cart-notification {
+  border: 1px solid $succ-notification;
+  border-radius: 5px;
+  color: $succ-notification;
+  background: #fff;
+  font-family: Lato;
+}
 
 .single-item-slider {
   height: 777px;
