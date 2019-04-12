@@ -44,15 +44,15 @@
         </form>
       </div>
       <div class="header-right flex-acenter">
-        <app-header-cart></app-header-cart>
+        <app-header-cart v-if="cartLoaded"></app-header-cart>
         <div class="btn">My Account &nbsp;<i class="fas fa-sort-down"></i></div>
       </div>
     </div>
     <div class="header-adapt">
       <div class="header-adapt-left">
-        <a href=".//" class="adapt-header-link">
+        <router-link to="/" class="adapt-header-link">
           <img src="../../assets/logo.png" alt="logo" class="header-link-img" />
-        </a>
+        </router-link>
         <form action="" class="adapt-search-form">
           <input
             class="adapt-search-input"
@@ -98,6 +98,7 @@
 
 <script>
 import HeaderCart from "./HeaderCart";
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -106,6 +107,9 @@ export default {
   },
   components: {
     appHeaderCart: HeaderCart
+  },
+  computed: {
+    ...mapGetters(["cartLoaded"])
   }
 };
 </script>

@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const state = {
-  catalog: []
+  catalog: [],
+  catalogLoaded: false
 };
 const mutations = {
   SET_CATALOG(state, items) {
@@ -9,8 +10,9 @@ const mutations = {
   }
 };
 const actions = {
-  setCatalog({ commit }) {
-    axios
+  setCatalog({ state, commit }) {
+    state.catalogLoaded = false;
+    return axios
       .get("/catalog.json")
       .then(response => {
         const data = response.data[Object.keys(response.data)[0]];
@@ -18,6 +20,7 @@ const actions = {
       })
       .then(items => {
         commit("SET_CATALOG", items);
+        state.catalogLoaded = true;
       })
       .catch(err => {
         console.log(err);
@@ -27,6 +30,9 @@ const actions = {
 const getters = {
   catalog(state) {
     return state.catalog;
+  },
+  catalogLoaded(state) {
+    return state.catalogLoaded;
   }
 };
 

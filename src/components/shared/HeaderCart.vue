@@ -35,7 +35,9 @@
       </div>
       <div class="cart-dropdown-total">
         <span class="total-name">TOTAL</span>
-        <span class="total-value" id="total-value">$0.00</span>
+        <span class="total-value" id="total-value">{{
+          cartTotal | currency
+        }}</span>
       </div>
       <a href="checkout.html" class="btn-white">CHECKOUT</a>
       <a href="cart.html" class="btn-white">GO TO CART</a>
@@ -53,7 +55,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["userCart"])
+    ...mapGetters(["userCart", "cartTotal"])
   },
   components: {
     appHeaderCartItem: HeaderCartItem

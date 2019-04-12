@@ -7,6 +7,7 @@
       <app-subscribe></app-subscribe>
     </div>
     <app-footer></app-footer>
+    <notifications group="foo" />
   </div>
 </template>
 

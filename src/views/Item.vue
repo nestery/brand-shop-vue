@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-breadcrumbs></app-breadcrumbs>
-    <section class="single-item section">
+    <section v-if="catalogLoaded" class="single-item section">
       <div class="single-item-slider">
         <div class="container">
           <carousel
@@ -141,7 +141,7 @@ export default {
   },
   props: ["id"],
   computed: {
-    ...mapGetters(["catalog"]),
+    ...mapGetters(["catalog", "catalogLoaded"]),
     item() {
       return this.catalog.find(item => {
         return item.id == this.id;
@@ -175,6 +175,34 @@ export default {
       };
 
       this.$store.dispatch("addToCart", item);
+      this.$notify({
+        // (optional)
+        // Name of the notification holder
+        group: "foo",
+
+        // (optional)
+        // Class that will be assigned to the notification
+        type: "warn",
+
+        // (optional)
+        // Title (will be wrapped in div.notification-title)
+        title: "This is title",
+
+        // Content (will be wrapped in div.notification-content)
+        text: "This is <b> content </b>",
+
+        // (optional)
+        // Overrides default/provided duration
+        duration: 10000,
+
+        // (optional)
+        // Overrides default/provided animation speed
+        speed: 1000,
+
+        // (optional)
+        // Data object that can be used in your template
+        data: {}
+      });
     }
   },
   created() {

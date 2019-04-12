@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import axios from "axios";
 import Vuelidate from "vuelidate";
+import Notifications from "vue-notification";
 
 Vue.config.productionTip = false;
 
@@ -15,6 +16,7 @@ Vue.filter("currency", function(value) {
   return `$${value.toFixed(2)}`;
 });
 
+Vue.use(Notifications);
 Vue.use(Vuelidate);
 
 new Vue({
