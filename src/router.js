@@ -18,10 +18,13 @@ export default new Router({
       path: "/catalog/item/:id",
       name: "item",
       props: true,
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "item" */ "./views/Item.vue")
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      props: true,
+      component: () => import(/* webpackChunkName: "cart" */ "./views/Cart.vue")
     }
   ],
   scrollBehavior(to, from, savedPosition) {

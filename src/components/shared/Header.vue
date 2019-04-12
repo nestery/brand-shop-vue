@@ -45,7 +45,7 @@
       </div>
       <div class="header-right flex-acenter">
         <app-header-cart v-if="cartLoaded"></app-header-cart>
-        <div class="btn">My Account &nbsp;<i class="fas fa-sort-down"></i></div>
+        <div class="btn">My Account &nbsp;<i class="far fa-user"></i></div>
       </div>
     </div>
     <div class="header-adapt">
@@ -200,13 +200,17 @@ export default {
 }
 
 .btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   height: 48px;
   font-size: 16px;
   display: inline-block;
   border: 1px solid $main-pink;
+  border-radius: 5px;
   color: $font-white;
   background-color: $main-pink;
-  padding: 13px 20px;
+  padding: 0px 20px;
   outline: none;
   box-sizing: border-box;
   transition: background-color, color 0.1s ease;

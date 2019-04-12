@@ -24,7 +24,7 @@
     <div v-if="cartOpen" class="cart-dropdown">
       <div class="cart-dropdown-list" id="cart-dropdown-list">
         <div v-if="userCart.length === 0" class="empty-catalog-info">
-          There are no items found
+          CART IS EMPTY
         </div>
         <app-header-cart-item
           v-else
@@ -39,8 +39,8 @@
           cartTotal | currency
         }}</span>
       </div>
-      <a href="checkout.html" class="btn-white">CHECKOUT</a>
-      <a href="cart.html" class="btn-white">GO TO CART</a>
+      <router-link to="/checkout" class="btn-white">CHECKOUT</router-link>
+      <router-link to="/cart" class="btn-white">GO TO CART</router-link>
     </div>
   </div>
 </template>
