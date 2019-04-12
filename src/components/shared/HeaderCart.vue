@@ -1,6 +1,9 @@
 <template>
   <div>
     <div @click="cartOpen = !cartOpen" class="cart-logo">
+      <span v-if="userCart.length > 0" class="cart-badge">{{
+        userCart.length
+      }}</span>
       <svg
         width="32px"
         height="29px"
@@ -20,7 +23,11 @@
     </div>
     <div v-if="cartOpen" class="cart-dropdown">
       <div class="cart-dropdown-list" id="cart-dropdown-list">
+        <div v-if="userCart.length === 0" class="empty-catalog-info">
+          There are no items found
+        </div>
         <app-header-cart-item
+          v-else
           v-for="(item, index) in userCart"
           :item="item"
           :key="index"
@@ -64,13 +71,12 @@ export default {
   &:hover .cart-svg {
     fill: $main-pink;
   }
-  &:after {
-    content: attr(data-before);
+  .cart-badge {
     color: #fff;
     font-size: 11px;
     position: absolute;
-    top: -6px;
-    right: -12px;
+    top: -5px;
+    right: -10px;
     text-align: center;
     line-height: 16px;
     font-weight: 700;

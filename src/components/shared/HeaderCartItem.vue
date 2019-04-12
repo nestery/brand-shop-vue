@@ -1,6 +1,6 @@
 <template>
   <div class="cart-dropdown-item" :data-id="item.id">
-    <span class="delete-btn">
+    <span @click="removeItem" class="delete-btn">
       <i class="fas fa-times-circle"></i>
     </span>
     <div
@@ -28,8 +28,127 @@
 
 <script>
 export default {
-  props: ["item"]
+  props: ["item"],
+  methods: {
+    removeItem() {
+      this.$store.dispatch("removeItem", +this.item.id);
+    }
+  }
 };
 </script>
+<style lang="scss">
+@import "../../scss/variables";
+.cart-dropdown-item {
+  display: flex;
+  position: relative;
+  border-bottom: solid 1px #ededed;
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
 
-<style></style>
+.delete-btn {
+  position: absolute;
+  right: 0px;
+  top: 32px;
+  color: #c0c0c0;
+  font-size: 16px;
+  font-weight: 400;
+  svg {
+    z-index: 99;
+  }
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  color: $main-pink;
+}
+
+.cart-dropdown-item-img {
+  width: 72px;
+  height: 85px;
+  margin-right: 15px;
+  background-size: cover;
+}
+
+.empty-cart-info {
+  padding: 30px 0px;
+  text-align: center;
+  background-color: #efefef;
+  margin-top: 20px;
+}
+
+.empty-catalog-info {
+  width: 100%;
+  padding: 30px 0px;
+  text-align: center;
+  background-color: #efefef;
+  margin-top: 20px;
+}
+
+.cart-dropdown-item-info a {
+  display: block;
+  padding: 8px 0px;
+  color: var(--font-color);
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cart-dropdown-item-info a:hover {
+  color: $main-pink;
+}
+
+.cart-dropdown-item-info span {
+  color: #b6b6b6;
+  font-size: 10px;
+  margin-right: -3px;
+}
+.star-active {
+  color: #e4af48 !important;
+}
+
+.cart-dropdown-item-amount {
+  margin-top: 8px;
+  color: $main-pink;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 700;
+  font-size: 10px;
+  word-spacing: 3px;
+}
+
+.cart-dropdown-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 30px 0;
+  color: var(--font-color);
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-white {
+  display: block;
+  width: 180px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 50px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  color: #4a4a4a;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  outline: none;
+  transition: color, border 0.1s ease;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $main-pink;
+    color: $main-pink;
+  }
+}
+</style>

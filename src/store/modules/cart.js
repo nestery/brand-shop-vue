@@ -9,6 +9,11 @@ const mutations = {
   },
   ADD_TO_CART(state, item) {
     state.cart.push(item);
+  },
+  REMOVE_FROM_CART(state, itemId) {
+    const record = state.cart.find(elem => elem.id === itemId);
+    const item = state.cart.indexOf(record);
+    state.cart.splice(item, 1);
   }
 };
 const actions = {
@@ -24,7 +29,6 @@ const actions = {
         }
       })
       .then(items => {
-        console.log(items);
         commit("SET_CART", items);
       })
       .catch(err => {
@@ -33,6 +37,17 @@ const actions = {
   },
   addToCart({ commit }, item) {
     commit("ADD_TO_CART", item);
+    axios
+      .put("/cart.json", state.cart)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+  removeItem({ commit }, itemId) {
+    commit("REMOVE_FROM_CART", itemId);
     axios
       .put("/cart.json", state.cart)
       .then(response => {
