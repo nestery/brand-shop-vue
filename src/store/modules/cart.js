@@ -24,6 +24,9 @@ const mutations = {
   UPDATE_QUANTITY(state, item) {
     const record = state.cart.find(elem => elem.id === item.id);
     record.quantity = item.quantity;
+  },
+  CLEAR_CART(state) {
+    state.cart = [];
   }
 };
 const actions = {
@@ -78,6 +81,17 @@ const actions = {
       .put("/cart.json", state.cart)
       .then(() => {
         console.log("Cart has been send to server");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+  clearCart({ commit }) {
+    commit("CLEAR_CART");
+    axios
+      .put("/cart.json", state.cart)
+      .then(() => {
+        console.log("Cart has been cleared");
       })
       .catch(err => {
         console.log(err);

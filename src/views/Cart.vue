@@ -23,7 +23,9 @@
         </table>
       </div>
       <div class="cart-actions">
-        <button class="btn-white" id="clear-cart">CLEAR SHOPPING CART</button>
+        <button @click="clearCart" class="btn-white">
+          CLEAR SHOPPING CART
+        </button>
         <router-link to="/catalog" class="btn-white"
           >CONTINUE SHOPPING</router-link
         >
@@ -91,6 +93,11 @@ export default {
   },
   components: {
     appMainCartItem: MainCartItem
+  },
+  methods: {
+    clearCart() {
+      this.$store.dispatch("clearCart");
+    }
   }
 };
 </script>

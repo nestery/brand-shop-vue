@@ -130,7 +130,9 @@ export default {
 }
 
 .btn-white {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 180px;
   height: 50px;
   text-align: center;
