@@ -20,6 +20,10 @@ const mutations = {
     const record = state.cart.find(elem => elem.id === itemId);
     const item = state.cart.indexOf(record);
     state.cart.splice(item, 1);
+  },
+  UPDATE_QUANTITY(state, item) {
+    const record = state.cart.find(elem => elem.id === item.id);
+    record.quantity = item.quantity;
   }
 };
 const actions = {
@@ -28,8 +32,6 @@ const actions = {
     return axios
       .get("/cart.json")
       .then(response => {
-        console.log(response);
-
         if (response.data) {
           const data = response.data;
           return data;
@@ -40,6 +42,7 @@ const actions = {
       .then(items => {
         commit("SET_CART", items);
         state.cartLoaded = true;
+        console.log("Cart has been loaded");
       })
       .catch(err => {
         console.log(err);
@@ -49,7 +52,9 @@ const actions = {
     commit("ADD_TO_CART", item);
     axios
       .put("/cart.json", state.cart)
-      .then(response => {})
+      .then(() => {
+        console.log("Item has been added to cart");
+      })
       .catch(err => {
         console.log(err);
       });
@@ -58,7 +63,22 @@ const actions = {
     commit("REMOVE_FROM_CART", itemId);
     axios
       .put("/cart.json", state.cart)
-      .then(response => {})
+      .then(() => {
+        console.log("Item has been removed from cart");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+  updateQuantityLocal({ commit }, item) {
+    commit("UPDATE_QUANTITY", item);
+  },
+  sendCart() {
+    axios
+      .put("/cart.json", state.cart)
+      .then(() => {
+        console.log("Cart has been send to server");
+      })
       .catch(err => {
         console.log(err);
       });

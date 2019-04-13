@@ -2,7 +2,10 @@
   <section class="section">
     <div class="container flex-col">
       <div class="cart-list">
-        <table class="cart-table">
+        <div v-if="userCart.length === 0" class="empty-cart-info">
+          YOUR CART IS EMPTY
+        </div>
+        <table v-if="userCart.length > 0 && cartLoaded" class="cart-table">
           <tbody id="cart-list">
             <tr class="table-header">
               <th>PRODUCT DETAILS</th>
@@ -21,7 +24,9 @@
       </div>
       <div class="cart-actions">
         <button class="btn-white" id="clear-cart">CLEAR SHOPPING CART</button>
-        <button class="btn-white">CONTINUE SHOPPING</button>
+        <router-link to="/catalog" class="btn-white"
+          >CONTINUE SHOPPING</router-link
+        >
       </div>
       <div class="cart-order">
         <div class="cart-shipping">
@@ -60,14 +65,15 @@
         </div>
         <div class="cart-proceed">
           <p class="cart-subtotal">SUB TOTAL</p>
-          <span class="cart-subtotal-sum" id="cart-subtotal"
-            ><!-- Subtotal --></span
+          <span class="cart-subtotal-sum" id="cart-subtotal">{{
+            cartTotal | currency
+          }}</span
           ><br />
           <div class="cart-grandtotal">
             <h6 class="cart-order-h6">GRAND TOTAL</h6>
-            <span class="cart-grandtotal-sum pink" id="cart-grandtotal"
-              ><!-- Grandtotal --></span
-            >
+            <span class="cart-grandtotal-sum pink" id="cart-grandtotal">{{
+              cartTotal | currency
+            }}</span>
           </div>
           <button class="btn">PROCEED TO CHECKOUT</button>
         </div>
@@ -81,7 +87,7 @@ import MainCartItem from "../components/MainCartItem";
 import { mapGetters } from "vuex";
 export default {
   computed: {
-    ...mapGetters(["userCart", "cartLoaded"])
+    ...mapGetters(["userCart", "cartLoaded", "cartTotal"])
   },
   components: {
     appMainCartItem: MainCartItem
@@ -130,11 +136,11 @@ export default {
   justify-content: space-between;
   margin-top: 44px;
   .btn-white {
-    display: block;
+    display: flex;
+    align-items: center;
     width: auto;
     height: 50px;
     padding: 0px 40px;
-    line-height: 14px;
     font-size: 14px;
     font-weight: 900;
     color: #4a4a4a;
@@ -155,9 +161,11 @@ export default {
   justify-content: space-between;
   margin-top: 60px;
   .btn-white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 120px;
     height: 35px;
-    line-height: 35px;
     margin-top: 23px;
     font-size: 11px;
   }

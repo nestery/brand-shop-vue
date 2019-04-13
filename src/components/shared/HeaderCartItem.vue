@@ -135,7 +135,6 @@ export default {
   height: 50px;
   text-align: center;
   box-sizing: border-box;
-  line-height: 50px;
   background: #fff;
   border: 1px solid #eaeaea;
   color: #4a4a4a;
