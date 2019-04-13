@@ -1,7 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import store from "./store";
 
 Vue.use(Router);
 
@@ -25,6 +24,13 @@ export default new Router({
       name: "cart",
       props: true,
       component: () => import(/* webpackChunkName: "cart" */ "./views/Cart.vue")
+    },
+    {
+      path: "/checkout",
+      name: "checkout",
+      props: true,
+      component: () =>
+        import(/* webpackChunkName: "checkout" */ "./views/Checkout.vue")
     }
   ],
   scrollBehavior(to, from, savedPosition) {

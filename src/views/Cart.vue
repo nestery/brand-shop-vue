@@ -77,7 +77,9 @@
               cartTotal | currency
             }}</span>
           </div>
-          <button class="btn">PROCEED TO CHECKOUT</button>
+          <router-link to="/checkout" class="btn"
+            >PROCEED TO CHECKOUT</router-link
+          >
         </div>
       </div>
     </div>
@@ -236,8 +238,12 @@ export default {
     width: 272px;
     margin-top: 17px;
     font-size: 16px;
+    color: #fff;
     font-weight: 700;
     outline: none;
+    &:hover {
+      color: $main-pink;
+    }
   }
 }
 

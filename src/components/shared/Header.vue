@@ -203,7 +203,7 @@ export default {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  height: 48px;
+  height: 49px;
   font-size: 16px;
   display: inline-block;
   border: 1px solid $main-pink;
