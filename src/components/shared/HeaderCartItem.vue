@@ -128,28 +128,4 @@ export default {
   font-weight: 700;
   text-transform: uppercase;
 }
-
-.btn-white {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 180px;
-  height: 50px;
-  text-align: center;
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #eaeaea;
-  color: #4a4a4a;
-  font-family: Lato;
-  font-size: 14px;
-  font-weight: 900;
-  text-transform: uppercase;
-  outline: none;
-  transition: color, border 0.1s ease;
-  &:hover {
-    cursor: pointer;
-    border: 1px solid $main-pink;
-    color: $main-pink;
-  }
-}
 </style>

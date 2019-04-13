@@ -1,61 +1,268 @@
 <template>
-  <section class="section checkout">
-    <div class="container-flex">
-      <form action="" method="">
-        <h6 class="form-ship-addr">01. &nbsp; SHIPPING ADDRESS</h6>
-        <div class="checkout-wrap">
-          <p class="p-capblack">CHECK AS A GUEST OR REGISTER</p>
-          <p class="p-smallgray">Register with us for future convenience</p>
+  <section class="section checkout flex-column container">
+    <h4 class="text-center mb-3">CHECKOUT</h4>
+    <div>
+      <div class="w50 flex-column checkout-wrapper">
+        <h6 class="form-ship-addr mt-3">01. &nbsp; SHIPPING ADDRESS</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
         </div>
-        <div class="checkout-wrap">
-          <input type="radio" class="radio" id="regist" name="reg" checked />
-          <label for="regist" value="regist" class="label-capblack"
-            >REGISTER</label
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
           >
-          <div class="breaker"></div>
-          <input type="radio" class="radio" id="guest" name="reg" />
-          <label for="guest" value="guest" class="label-capblack"
-            >CHECKOUT AS A GUEST</label
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">NEXT</div>
+        </div>
+      </div>
+      <div class="w50 flex-column">
+        <h6 class="form-ship-addr mt-3">02. &nbsp; BILLING INFORMATION</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
           >
+          <input type="text" autocomplete="username" />
         </div>
-        <div class="checkout-wrap">
-          <p class="p-capblack">register and save time!</p>
-          <p class="p-smallgray">Register with us for future convenience</p>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
         </div>
-        <div class="checkout-wrap">
-          <p class="p-smallgray">
-            <i class="fas fa-angle-double-right"></i>Fast and easy checkout
-          </p>
-          <p class="p-smallgray">
-            <i class="fas fa-angle-double-right"></i>Easy access to your order
-            history and status
-          </p>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">BACK</div>
+          <div class="btn-white--sm">NEXT</div>
         </div>
-        <div class="btn-white">CONTINUE</div>
-      </form>
-      <app-login></app-login>
-    </div>
-    <div class="container checkout-steps">
-      <h6>02. &nbsp; BILLING INFORMATION</h6>
-      <h6>03. &nbsp; SHIPPING INFORMATION</h6>
-      <h6>04. &nbsp; SHIPPING METHOD</h6>
-      <h6>05. &nbsp; PAYMENT METHOD</h6>
-      <h6>06. &nbsp; ORDER REVIEW</h6>
+      </div>
+      <div class="w50 flex-column">
+        <h6 class="form-ship-addr mt-3">03. &nbsp; SHIPPING INFORMATION</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
+          >
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">BACK</div>
+          <div class="btn-white--sm">NEXT</div>
+        </div>
+      </div>
+      <div class="w50 flex-column">
+        <h6 class="form-ship-addr mt-3">04. &nbsp; SHIPPING METHOD</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
+          >
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">BACK</div>
+          <div class="btn-white--sm">NEXT</div>
+        </div>
+      </div>
+      <div class="w50 flex-column">
+        <h6 class="form-ship-addr mt-3">05. &nbsp; PAYMENT METHOD</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
+          >
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">BACK</div>
+          <div class="btn-white--sm">NEXT</div>
+        </div>
+      </div>
+      <div class="w50 flex-column">
+        <h6 class="form-ship-addr mt-3">06. &nbsp; ORDER REVIEW</h6>
+        <div class="checkout-input mb-3">
+          <p>NAME</p>
+          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>COUNTRY</p>
+          <span class="checkout-tip">Enter your country name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>CITY</p>
+          <span class="checkout-tip">Enter your city name</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ADDRESS LINE</p>
+          <span class="checkout-tip"
+            >Enter your address e.g. Nowhere st. 15</span
+          >
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="checkout-input mb-3">
+          <p>ZIP/Postal</p>
+          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+          <input type="text" autocomplete="username" />
+        </div>
+        <div class="buttons-wrap">
+          <div class="btn-white--sm">BACK</div>
+          <div class="btn-white--sm">PLACE ORDER</div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Login from "../components/shared/auth/Login";
-export default {
-  components: {
-    appLogin: Login
-  }
-};
+export default {};
 </script>
 
 <style lang="scss">
 @import "../scss/variables";
+.buttons-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-wrapper {
+  padding-bottom: 30px;
+  border-bottom: 1px solid $font-black;
+}
+
+.checkout-tip {
+  font-size: 12px;
+  color: #b3b2b2;
+}
+
+.checkout-input {
+  width: 100%;
+  p {
+    margin-bottom: -6px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    color: $font-black;
+  }
+
+  input {
+    width: 100%;
+    padding: 2px 10px 2px 0;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    outline: none;
+    transition: border 0.2s ease;
+    &:focus {
+      border-bottom: 1px solid #4d4d4d;
+    }
+  }
+  .new-acc {
+    color: #b3b2b2;
+    cursor: pointer;
+    &:hover {
+      color: $main-pink;
+    }
+  }
+}
+
 .form-ship-addr {
   margin-bottom: 20px;
   color: var(--font-color);
@@ -87,25 +294,7 @@ export default {
 }
 
 .checkout {
-  input {
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-  .btn-white {
-    margin-top: 40px;
-    margin-left: 35px;
-  }
-  .container-flex {
-    padding-bottom: 80px;
-    border-bottom: 1px solid #e8e8e8;
-  }
-}
-
-.container-flex {
-  display: flex;
-  justify-content: space-between;
-  width: 1140px;
-  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .checkout-steps h6 {

@@ -1,29 +1,42 @@
 <template>
-  <form class="registered" action="" method="">
+  <div class="login">
     <h6 class="h6-login">LOGIN</h6>
-    <p class="p-smallgray">Please log in below</p>
     <div class="reg-input">
-      <p>EMAIL ADDRESS<sup>*</sup></p>
+      <p>EMAIL ADDRESS</p>
       <input type="email" required autocomplete="username" />
+      <p @click="openSignup" class="new-acc">Create new account</p>
     </div>
     <div class="reg-input">
-      <p>PASSWORD<sup>*</sup></p>
+      <p>PASSWORD</p>
       <input type="password" required autocomplete="current-password" />
     </div>
-    <p class="req-hint"><sup>*</sup>Required Fields</p>
-    <input type="submit" class="btn-white" value="LOG IN" />
-    <router-link to="/recovery">Forgot Password ?</router-link>
-  </form>
+    <button class="btn-white">LOG IN</button>
+    <router-link to="/recovery" class="req-hint">Forgot Password ?</router-link>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openSignup() {
+      this.$emit("openSignup");
+    }
+  }
+};
 </script>
 
 <style lang="scss">
 @import "../../../scss/variables";
 
-.registered {
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid $font-black;
+  border-radius: 10px;
+
   .h6-login {
     text-align: center;
   }
@@ -34,32 +47,28 @@ export default {};
   }
   .btn-white {
     display: inline-block;
-    margin: 32px 32px 0 0;
+    margin: 32px 0 0 0;
   }
 }
 
 .reg-input {
-  margin: 25px 0px;
+  margin-top: 25px;
+  width: 80%;
   p {
     position: relative;
     font-size: 12px;
     font-weight: 700;
     color: $font-black;
   }
-  sup {
-    position: absolute;
-    top: -3px;
-    font-size: 17px;
-    color: #ff0d0d;
-  }
+
   input {
-    width: 390px;
+    width: 100%;
     padding: 5px 15px;
-    border: 1px solid #e8e8e8;
     font-size: 18px;
     font-weight: 300;
     line-height: 32px;
     border: 1px solid #e6e6e6;
+    border-radius: 5px;
     background-color: #ffffff;
     outline: none;
     transition: border 0.2s ease;
@@ -67,11 +76,12 @@ export default {};
       border: 1px solid #4d4d4d;
     }
   }
-}
-
-.req-hint {
-  font-size: 13px;
-  color: #ff0d0d;
-  font-weight: 700;
+  .new-acc {
+    color: #b3b2b2;
+    cursor: pointer;
+    &:hover {
+      color: $main-pink;
+    }
+  }
 }
 </style>

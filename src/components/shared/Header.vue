@@ -45,7 +45,9 @@
       </div>
       <div class="header-right flex-acenter">
         <app-header-cart v-if="cartLoaded"></app-header-cart>
-        <div class="btn">My Account &nbsp;<i class="far fa-user"></i></div>
+        <div @click="modalOpen = true" class="btn">
+          LOG IN &nbsp;<i class="far fa-user"></i>
+        </div>
       </div>
     </div>
     <div class="header-adapt">
@@ -93,20 +95,45 @@
         </a>
       </div>
     </div>
+    <div v-if="modalOpen" class="modal-back">
+      <div class="modal-substrate">
+        <div @click="closeModal" class="close-modal">
+          <i class="fas fa-times"></i>
+        </div>
+        <app-signup v-if="showSignup" class="modal-auth"></app-signup>
+        <app-login
+          v-else
+          @openSignup="showSignup = true"
+          class="modal-auth"
+        ></app-login>
+      </div>
+    </div>
   </header>
 </template>
 
 <script>
 import HeaderCart from "./HeaderCart";
+import Login from "./auth/Login";
+import Signup from "./auth/Signup";
 import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      browseOpen: false
+      browseOpen: false,
+      modalOpen: false,
+      showSignup: false
     };
   },
+  methods: {
+    closeModal() {
+      this.modalOpen = false;
+      this.showSignup = false;
+    }
+  },
   components: {
-    appHeaderCart: HeaderCart
+    appHeaderCart: HeaderCart,
+    appLogin: Login,
+    appSignup: Signup
   },
   computed: {
     ...mapGetters(["cartLoaded"])
@@ -116,6 +143,46 @@ export default {
 
 <style lang="scss">
 @import "../../scss/variables";
+
+.close-modal {
+  position: absolute;
+  font-size: 26px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $main-pink;
+  }
+}
+
+.modal-back {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.16);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+}
+
+.modal-substrate {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 40px 0px;
+  background: #fff;
+  min-height: 450px;
+}
+
+.modal-auth {
+  width: 75%;
+  height: 80%;
+}
 
 .browse-btn {
   padding: 3px 15px;
