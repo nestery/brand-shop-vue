@@ -4,213 +4,227 @@
     <div>
       <div class="w50 flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">01. &nbsp; SHIPPING ADDRESS</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">NEXT</div>
-        </div>
+        <transition
+          name="slide"
+          enter-active-class="animated faster rollInDown"
+          leave-active-class="animated faster rollOutUp"
+        >
+          <div v-if="currentStep === 1" class="overflow-h">
+            <div class="checkout-input mb-3">
+              <p>NAME</p>
+              <span class="checkout-tip"
+                >Enter your full name e.g. John Doe</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>COUNTRY</p>
+              <span class="checkout-tip">Enter your country name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>CITY</p>
+              <span class="checkout-tip">Enter your city name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ADDRESS LINE</p>
+              <span class="checkout-tip"
+                >Enter your address e.g. Nowhere st. 15</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ZIP/Postal</p>
+              <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="buttons-wrap">
+              <div @click="currentStep = 2" class="btn-white--sm">NEXT</div>
+            </div>
+          </div>
+        </transition>
       </div>
-      <div class="w50 flex-column">
+      <div class="w50 flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">02. &nbsp; BILLING INFORMATION</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">BACK</div>
-          <div class="btn-white--sm">NEXT</div>
-        </div>
+        <transition
+          name="slide"
+          enter-active-class="animated faster rollInDown"
+          leave-active-class="animated faster rollOutUp"
+        >
+          <div v-if="currentStep === 2" class="overflow-h">
+            <div class="checkout-input mb-3">
+              <p>NAME</p>
+              <span class="checkout-tip"
+                >Enter your full name e.g. John Doe</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>COUNTRY</p>
+              <span class="checkout-tip">Enter your country name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>CITY</p>
+              <span class="checkout-tip">Enter your city name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ADDRESS LINE</p>
+              <span class="checkout-tip"
+                >Enter your address e.g. Nowhere st. 15</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ZIP/Postal</p>
+              <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="buttons-wrap">
+              <div @click="currentStep = 1" class="btn-white--sm">BACK</div>
+              <div @click="currentStep = 3" class="btn-white--sm">NEXT</div>
+            </div>
+          </div>
+        </transition>
       </div>
-      <div class="w50 flex-column">
-        <h6 class="form-ship-addr mt-3">03. &nbsp; SHIPPING INFORMATION</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">BACK</div>
-          <div class="btn-white--sm">NEXT</div>
-        </div>
+      <div class="w50 flex-column checkout-wrapper">
+        <h6 class="form-ship-addr mt-3">03. &nbsp; SHIPPING METHOD</h6>
+        <transition
+          name="slide"
+          enter-active-class="animated faster rollInDown"
+          leave-active-class="animated faster rollOutUp"
+        >
+          <div v-if="currentStep === 3" class="overflow-h">
+            <div class="checkout-wrap">
+              <p class="p-capblack">SELECT SHIPPING METHOD</p>
+              <p class="p-smallgray">Payment after all steps</p>
+            </div>
+            <div class="checkout-wrap mb-5">
+              <input
+                type="radio"
+                class="radio"
+                id="credit"
+                name="reg"
+                checked
+              />
+              <label for="credit" value="credit" class="label-capblack"
+                >Boxberry</label
+              >
+              <div class="breaker"></div>
+              <input type="radio" class="radio" id="paypal" name="reg" />
+              <label for="paypal" value="paypal" class="label-capblack"
+                >ESM</label
+              >
+              <div class="breaker"></div>
+              <input type="radio" class="radio" id="paypal" name="reg" />
+              <label for="paypal" value="paypal" class="label-capblack"
+                >From pickpoint</label
+              >
+            </div>
+            <div class="buttons-wrap">
+              <div @click="currentStep = 2" class="btn-white--sm">BACK</div>
+              <div @click="currentStep = 4" class="btn-white--sm">NEXT</div>
+            </div>
+          </div>
+        </transition>
       </div>
-      <div class="w50 flex-column">
-        <h6 class="form-ship-addr mt-3">04. &nbsp; SHIPPING METHOD</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">BACK</div>
-          <div class="btn-white--sm">NEXT</div>
-        </div>
+      <div class="w50 flex-column checkout-wrapper">
+        <h6 class="form-ship-addr mt-3">04. &nbsp; PAYMENT METHOD</h6>
+        <transition
+          name="slide"
+          enter-active-class="animated faster rollInDown"
+          leave-active-class="animated faster rollOutUp"
+        >
+          <div v-if="currentStep === 4" class="overflow-h">
+            <div class="checkout-wrap">
+              <p class="p-capblack">SELECT PAYMENT METHOD</p>
+              <p class="p-smallgray">Payment after all steps</p>
+            </div>
+            <div class="checkout-wrap mb-5">
+              <input
+                type="radio"
+                class="radio"
+                id="credit"
+                name="reg"
+                checked
+              />
+              <label for="credit" value="credit" class="label-capblack"
+                >CREDIT CARD</label
+              >
+              <div class="breaker"></div>
+              <input type="radio" class="radio" id="paypal" name="reg" />
+              <label for="paypal" value="paypal" class="label-capblack"
+                >PayPal</label
+              >
+            </div>
+            <div class="buttons-wrap">
+              <div @click="currentStep = 3" class="btn-white--sm">BACK</div>
+              <div @click="currentStep = 5" class="btn-white--sm">NEXT</div>
+            </div>
+          </div>
+        </transition>
       </div>
-      <div class="w50 flex-column">
-        <h6 class="form-ship-addr mt-3">05. &nbsp; PAYMENT METHOD</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">BACK</div>
-          <div class="btn-white--sm">NEXT</div>
-        </div>
-      </div>
-      <div class="w50 flex-column">
-        <h6 class="form-ship-addr mt-3">06. &nbsp; ORDER REVIEW</h6>
-        <div class="checkout-input mb-3">
-          <p>NAME</p>
-          <span class="checkout-tip">Enter your full name e.g. John Doe</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>COUNTRY</p>
-          <span class="checkout-tip">Enter your country name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>CITY</p>
-          <span class="checkout-tip">Enter your city name</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ADDRESS LINE</p>
-          <span class="checkout-tip"
-            >Enter your address e.g. Nowhere st. 15</span
-          >
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="checkout-input mb-3">
-          <p>ZIP/Postal</p>
-          <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
-          <input type="text" autocomplete="username" />
-        </div>
-        <div class="buttons-wrap">
-          <div class="btn-white--sm">BACK</div>
-          <div class="btn-white--sm">PLACE ORDER</div>
-        </div>
+      <div class="w50 flex-column checkout-wrapper">
+        <h6 class="form-ship-addr mt-3">05. &nbsp; ORDER REVIEW</h6>
+        <transition
+          name="slide"
+          enter-active-class="animated faster rollInDown"
+          leave-active-class="animated faster rollOutUp"
+        >
+          <div v-if="currentStep === 5" class="overflow-h">
+            <div class="checkout-input mb-3">
+              <p>NAME</p>
+              <span class="checkout-tip"
+                >Enter your full name e.g. John Doe</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>COUNTRY</p>
+              <span class="checkout-tip">Enter your country name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>CITY</p>
+              <span class="checkout-tip">Enter your city name</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ADDRESS LINE</p>
+              <span class="checkout-tip"
+                >Enter your address e.g. Nowhere st. 15</span
+              >
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="checkout-input mb-3">
+              <p>ZIP/Postal</p>
+              <span class="checkout-tip">Enter your ZIP e.g. 123432</span>
+              <input type="text" autocomplete="username" />
+            </div>
+            <div class="buttons-wrap">
+              <div @click="currentStep = 4" class="btn-white--sm">BACK</div>
+              <div @click="placeOrder" class="btn-white--sm">PLACE ORDER</div>
+            </div>
+          </div>
+        </transition>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      currentStep: 1
+    };
+  },
+  methods: {
+    placeOrder() {}
+  }
+};
 </script>
 
 <style lang="scss">
