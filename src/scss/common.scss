@@ -31,6 +31,12 @@
 .justify-content-between{
   justify-content: space-between;
 }
+.justify-content-center{
+  justify-content: center;
+} 
+.align-items-start{
+  align-items: flex-start;
+}
 
 .wrapper {
   min-height: 100%;
@@ -72,6 +78,10 @@ h1{
   font-size: 60px;
 }
 
+
+.p-3{
+  padding: 1rem;
+}
 
 .m-0 {
   margin: 0 !important;

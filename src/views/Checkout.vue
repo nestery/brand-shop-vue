@@ -215,24 +215,35 @@
     </div>
     <div class="checkout-right">
       <div class="flex-column order-wrapper">
-        <h6 class="form-ship-addr">YOUR ORDER</h6>
-        <div
-          v-for="(item, index) in userCart"
-          :key="index"
-          class="d-flex order-row"
-        >
-          <div
-            class="chk-ord-img"
-            :style="{ backgroundImage: `url(${item.img})` }"
-          ></div>
-          <div>{{ item.name }}</div>
-          <div>{{ item.color }}</div>
-          <div>{{ item.size }}</div>
-          <div>{{ item.quantity }}</div>
-          <div>{{ item.price | currency }}</div>
-          <div>{{ (item.price * item.quantity) | currency }}</div>
-        </div>
-        <div class="checkout-total">TOTAL: {{ cartTotal | currency }}</div>
+        <h6 class="form-ship-addr text-center">YOUR ORDER</h6>
+        <table class="chk-table">
+          <tbody>
+            <tr class="chk-header">
+              <th>PRODUCT DETAILS</th>
+              <th>UNIT PRICE</th>
+              <th>QUANTITY</th>
+              <th>SUBTOTAL</th>
+            </tr>
+            <tr v-for="(item, index) in userCart" :key="index">
+              <td class="d-flex mt-2">
+                <div
+                  class="chk-ord-img mr-1"
+                  :style="{ backgroundImage: `url(${item.img})` }"
+                ></div>
+                <div class="flex-column justify-content-center align-items-start">
+                <div>{{ item.name }}</div>
+                <div>Color: {{ item.color.toUpperCase() }}</div>
+                <div>Size: {{ item.size }}</div>
+                </div>
+              </td>
+              <td>{{ item.price | currency }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>{{ (item.price * item.quantity) | currency }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="chk-total mt-2">TOTAL: {{ cartTotal | currency }}</div>
       </div>
     </div>
   </section>
@@ -258,9 +269,39 @@ export default {
 <style lang="scss">
 @import "../scss/variables";
 
+.chk-total{
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px solid $font-black;
+}
+
+.chk-header{
+ font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #222222;
+  th {
+    padding-bottom: 20px;
+    font-weight: inherit;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #eaeaea;
+  }
+
+}
+
+.chk-details{
+  display: flex;
+}
+
+.chk-table{
+  font-size: 12px;
+}
+
 .chk-ord-img {
-  width: 13%;
-  height: 100%;
+  width: 60px;
+  height: 80px;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
