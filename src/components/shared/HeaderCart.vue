@@ -21,7 +21,7 @@
         />
       </svg>
     </div>
-    <div v-if="cartOpen" class="cart-dropdown">
+    <div v-if="cartOpen" ref="cartDropdown" class="cart-dropdown">
       <div class="cart-dropdown-list" id="cart-dropdown-list">
         <div v-if="userCart.length === 0" class="empty-catalog-info">
           CART IS EMPTY
@@ -38,8 +38,18 @@
               cartTotal | currency
             }}</span>
           </div>
-          <router-link to="/checkout" class="btn-white">CHECKOUT</router-link>
-          <router-link to="/cart" class="btn-white">GO TO CART</router-link>
+          <router-link
+            to="/checkout"
+            @click.native="cartOpen = false"
+            class="btn-white"
+            >CHECKOUT</router-link
+          >
+          <router-link
+            to="/cart"
+            @click.native="cartOpen = false"
+            class="btn-white"
+            >GO TO CART</router-link
+          >
         </div>
       </div>
     </div>
@@ -60,6 +70,24 @@ export default {
   },
   components: {
     appHeaderCartItem: HeaderCartItem
+  },
+  methods: {
+    handleClick(event) {
+      if (!this.$refs.cartDropdown) {
+        return;
+      }
+      let menu = this.$refs.cartDropdown;
+      let target = event.target;
+      if (target !== menu && !menu.contains(target)) {
+        this.cartOpen = false;
+      }
+    }
+  },
+  created() {
+    window.addEventListener("click", this.handleClick);
+  },
+  destroyed() {
+    window.removeEventListener("click", this.handleClick);
   }
 };
 </script>

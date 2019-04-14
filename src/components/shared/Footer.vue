@@ -3,9 +3,9 @@
     <div class="footer-main">
       <div class="container footer-wrap">
         <div class="brand-info">
-          <a class="flex-acenter logo-text" href="/"
+          <router-link class="flex-acenter logo-text" to="/"
             ><img src="../../assets/logo.png" alt="logo" />BRAN
-            <span class="logo-D">D</span></a
+            <span class="logo-D">D</span></router-link
           >
           <p>
             Objectively transition extensive data rather than cross functional

@@ -26,11 +26,11 @@
             </div>
           </router-link>
         </div>
-        <div class="btn">
+        <router-link to="/catalog" tag="div" class="btn">
           Browse All Product &nbsp; &nbsp;<i
             class="fas fa-long-arrow-alt-right"
           ></i>
-        </div>
+        </router-link>
       </div>
     </div>
   </section>

@@ -279,13 +279,13 @@ export default {
  font-size: 13px;
   font-weight: 700;
   letter-spacing: -0.2px;
-  color: #222222;
+  color: $font-black;
   th {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-weight: inherit;
     border-style: solid;
     border-width: 0 0 1px 0;
-    border-color: #eaeaea;
+    border-color:  $font-black;
   }
 
 }

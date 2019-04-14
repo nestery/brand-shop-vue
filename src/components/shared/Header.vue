@@ -2,9 +2,9 @@
   <header class="header">
     <div class="container header-flex adapt-hidden">
       <div class="header-left flex-acenter">
-        <a class="flex-acenter logo-text" href="/"
+        <router-link class="flex-acenter logo-text" to="/"
           ><img src="../../assets/logo.png" alt="logo" />BRAN
-          <span class="logo-D">D</span></a
+          <span class="logo-D">D</span></router-link
         >
         <div v-if="browseOpen" class="browse-droplist">
           <div class="droplist-block">
@@ -138,6 +138,14 @@ export default {
   computed: {
     ...mapGetters(["cartLoaded"])
   }
+  // created(){
+  //   window.addEventListener('click',(event)=>{
+  //     console.log(event.target);
+  //     this.browseOpen = false
+  //     this.modalOpen = false
+  //     this.showSignup = false
+  //   })
+  // }
 };
 </script>
 
