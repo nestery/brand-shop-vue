@@ -6,32 +6,7 @@
           ><img src="../../assets/logo.png" alt="logo" />BRAN
           <span class="logo-D">D</span></router-link
         >
-        <div v-if="browseOpen" class="browse-droplist">
-          <div class="droplist-block">
-            <p>WOMEN</p>
-            <ul>
-              <li><a href="catalog.html">Dresses</a></li>
-              <li><a href="catalog.html">Tops</a></li>
-              <li><a href="catalog.html">Sweaters/Knits</a></li>
-              <li><a href="catalog.html">Jackets/Coats</a></li>
-              <li><a href="catalog.html">Blazers</a></li>
-              <li><a href="catalog.html">Denim</a></li>
-              <li><a href="catalog.html">Leggings/Pants</a></li>
-              <li><a href="catalog.html">Skirts/Shorts</a></li>
-              <li><a href="catalog.html">Accessories</a></li>
-            </ul>
-            <p>MEN</p>
-            <ul>
-              <li><a href="catalog.html">Tees/Tank tops</a></li>
-              <li><a href="catalog.html">Shirts/Polos</a></li>
-              <li><a href="catalog.html">Sweaters</a></li>
-              <li><a href="catalog.html">Sweatshirts/Hoodies</a></li>
-              <li><a href="catalog.html">Blazers</a></li>
-              <li><a href="catalog.html">Jackets/vests</a></li>
-            </ul>
-          </div>
-        </div>
-        <form class="flex-acenter" action="#">
+        <div class="flex-acenter search">
           <div @click="browseOpen = !browseOpen" class="browse-btn">
             Browse <i class="fas fa-sort-down dropdown"></i>
           </div>
@@ -41,7 +16,32 @@
             placeholder="Search for item..."
           />
           <button class="search-btn"><i class="fas fa-search"></i></button>
-        </form>
+          <div class="browse-droplist">
+            <div class="droplist-block">
+              <p>WOMEN</p>
+              <ul>
+                <li><a href="catalog.html">Dresses</a></li>
+                <li><a href="catalog.html">Tops</a></li>
+                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Denim</a></li>
+                <li><a href="catalog.html">Leggings/Pants</a></li>
+                <li><a href="catalog.html">Skirts/Shorts</a></li>
+                <li><a href="catalog.html">Accessories</a></li>
+              </ul>
+              <p>MEN</p>
+              <ul>
+                <li><a href="catalog.html">Tees/Tank tops</a></li>
+                <li><a href="catalog.html">Shirts/Polos</a></li>
+                <li><a href="catalog.html">Sweaters</a></li>
+                <li><a href="catalog.html">Sweatshirts/Hoodies</a></li>
+                <li><a href="catalog.html">Blazers</a></li>
+                <li><a href="catalog.html">Jackets/vests</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="header-right flex-acenter">
         <app-header-cart v-if="cartLoaded"></app-header-cart>
@@ -138,14 +138,6 @@ export default {
   computed: {
     ...mapGetters(["cartLoaded"])
   }
-  // created(){
-  //   window.addEventListener('click',(event)=>{
-  //     console.log(event.target);
-  //     this.browseOpen = false
-  //     this.modalOpen = false
-  //     this.showSignup = false
-  //   })
-  // }
 };
 </script>
 
@@ -195,6 +187,7 @@ export default {
 .browse-btn {
   padding: 3px 15px;
   color: $font-black;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 300;
   line-height: 32px;
@@ -205,7 +198,12 @@ export default {
   transition: background-color 0.1s ease;
   &:hover {
     background-color: #fff;
-    cursor: pointer;
+  }
+}
+
+.search {
+  &:hover .browse-droplist {
+    display: block;
   }
 }
 
@@ -326,6 +324,7 @@ export default {
   display: none;
 }
 .browse-droplist {
+  display: none;
   width: 262px;
   position: absolute;
   top: 66px;

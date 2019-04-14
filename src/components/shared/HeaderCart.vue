@@ -84,10 +84,10 @@ export default {
     }
   },
   created() {
-    window.addEventListener("click", this.handleClick);
+    window.addEventListener("click", this.handleClick, true);
   },
   destroyed() {
-    window.removeEventListener("click", this.handleClick);
+    window.removeEventListener("click", this.handleClick, true);
   }
 };
 </script>
