@@ -1,9 +1,11 @@
 <template>
-  <section class="section checkout flex-column container">
-    <h4 class="text-center mb-3">CHECKOUT</h4>
-    <div>
-      <div class="w50 flex-column checkout-wrapper">
-        <h6 class="form-ship-addr mt-3">01. &nbsp; SHIPPING ADDRESS</h6>
+  <section
+    class="section checkout d-flex flex-wrap container justify-content-between"
+  >
+    <h4 class="text-center mb-5 w100 ">CHECKOUT</h4>
+    <div class="checkout-left">
+      <div class="flex-column checkout-wrapper">
+        <h6 class="form-ship-addr">01. &nbsp; SHIPPING ADDRESS</h6>
         <transition
           name="slide"
           enter-active-class="animated faster rollInDown"
@@ -45,7 +47,7 @@
           </div>
         </transition>
       </div>
-      <div class="w50 flex-column checkout-wrapper">
+      <div class="flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">02. &nbsp; BILLING INFORMATION</h6>
         <transition
           name="slide"
@@ -89,7 +91,7 @@
           </div>
         </transition>
       </div>
-      <div class="w50 flex-column checkout-wrapper">
+      <div class="flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">03. &nbsp; SHIPPING METHOD</h6>
         <transition
           name="slide"
@@ -130,7 +132,7 @@
           </div>
         </transition>
       </div>
-      <div class="w50 flex-column checkout-wrapper">
+      <div class="flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">04. &nbsp; PAYMENT METHOD</h6>
         <transition
           name="slide"
@@ -166,7 +168,7 @@
           </div>
         </transition>
       </div>
-      <div class="w50 flex-column checkout-wrapper">
+      <div class="flex-column checkout-wrapper">
         <h6 class="form-ship-addr mt-3">05. &nbsp; ORDER REVIEW</h6>
         <transition
           name="slide"
@@ -211,10 +213,33 @@
         </transition>
       </div>
     </div>
+    <div class="checkout-right">
+      <div class="flex-column order-wrapper">
+        <h6 class="form-ship-addr">YOUR ORDER</h6>
+        <div
+          v-for="(item, index) in userCart"
+          :key="index"
+          class="d-flex order-row"
+        >
+          <div
+            class="chk-ord-img"
+            :style="{ backgroundImage: `url(${item.img})` }"
+          ></div>
+          <div>{{ item.name }}</div>
+          <div>{{ item.color }}</div>
+          <div>{{ item.size }}</div>
+          <div>{{ item.quantity }}</div>
+          <div>{{ item.price | currency }}</div>
+          <div>{{ (item.price * item.quantity) | currency }}</div>
+        </div>
+        <div class="checkout-total">TOTAL: {{ cartTotal | currency }}</div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -223,18 +248,43 @@ export default {
   },
   methods: {
     placeOrder() {}
+  },
+  computed: {
+    ...mapGetters(["userCart", "cartTotal"])
   }
 };
 </script>
 
 <style lang="scss">
 @import "../scss/variables";
+
+.chk-ord-img {
+  width: 13%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.checkout-left {
+  width: 40%;
+}
+.checkout-right {
+  width: 40%;
+}
+
 .buttons-wrap {
   display: flex;
   justify-content: space-between;
 }
 
 .checkout-wrapper {
+  width: 100%;
   padding-bottom: 30px;
   border-bottom: 1px solid $font-black;
 }

@@ -26,21 +26,22 @@
         <div v-if="userCart.length === 0" class="empty-catalog-info">
           CART IS EMPTY
         </div>
-        <app-header-cart-item
-          v-else
-          v-for="(item, index) in userCart"
-          :item="item"
-          :key="index"
-        ></app-header-cart-item>
+        <div v-else>
+          <app-header-cart-item
+            v-for="(item, index) in userCart"
+            :item="item"
+            :key="index"
+          ></app-header-cart-item>
+          <div class="cart-dropdown-total">
+            <span class="total-name">TOTAL</span>
+            <span class="total-value" id="total-value">{{
+              cartTotal | currency
+            }}</span>
+          </div>
+          <router-link to="/checkout" class="btn-white">CHECKOUT</router-link>
+          <router-link to="/cart" class="btn-white">GO TO CART</router-link>
+        </div>
       </div>
-      <div class="cart-dropdown-total">
-        <span class="total-name">TOTAL</span>
-        <span class="total-value" id="total-value">{{
-          cartTotal | currency
-        }}</span>
-      </div>
-      <router-link to="/checkout" class="btn-white">CHECKOUT</router-link>
-      <router-link to="/cart" class="btn-white">GO TO CART</router-link>
     </div>
   </div>
 </template>
@@ -69,7 +70,7 @@ export default {
   position: relative;
   cursor: pointer;
   margin-right: 26px;
-  z-index: 9999;
+  z-index: 999;
   &:hover .cart-svg {
     fill: $main-pink;
   }

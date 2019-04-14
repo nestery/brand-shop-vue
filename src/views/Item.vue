@@ -208,6 +208,7 @@ export default {
   color: $succ-notification;
   background: #fff;
   font-family: Lato;
+  z-index: 9999;
 }
 
 .single-item-slider {
