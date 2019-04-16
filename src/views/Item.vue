@@ -376,32 +376,4 @@ export default {
     }
   }
 }
-
-.btn-reverse {
-  font-family: Lato;
-  padding: 20px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 700;
-  color: $main-pink;
-  border: 1px solid $main-pink;
-  background: #fff;
-  transition: color, background 0.1s ease;
-}
-
-.btn-reverse:hover {
-  cursor: pointer;
-  color: #fff;
-  background: $main-pink;
-}
-
-.btn-reverse[disabled] {
-  cursor: not-allowed;
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
-  .cart-svg {
-    fill: #666666;
-  }
-}
 </style>

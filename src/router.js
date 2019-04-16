@@ -20,6 +20,12 @@ export default new Router({
       component: () => import(/* webpackChunkName: "item" */ "./views/Item.vue")
     },
     {
+      path: "/catalog",
+      name: "catalog",
+      component: () =>
+        import(/* webpackChunkName: "catalog" */ "./views/Catalog.vue")
+    },
+    {
       path: "/cart",
       name: "cart",
       props: true,

@@ -8,320 +8,334 @@
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Men</a>
+          <router-link to="/catalog" class="menu-link">Men</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>MEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
-              </ul>
-            </div>
-            <div class="category-droplist">
-              <h6>MEN</h6>
-              <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>MEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>MEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <div class="category-droplist">
+              <h6>MEN</h6>
+              <ul>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+              </ul>
+            </div>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Women</a>
+          <router-link to="/catalog" class="menu-link">Women</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
-              </ul>
-            </div>
-            <div class="category-droplist">
-              <h6>WOMEN</h6>
-              <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-              </ul>
-            </div>
-            <div class="category-droplist">
-              <h6>WOMEN</h6>
-              <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>WOMEN</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <div class="category-droplist">
+              <h6>WOMEN</h6>
+              <ul>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+              </ul>
+            </div>
+            <div class="category-droplist">
+              <h6>WOMEN</h6>
+              <ul>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+              </ul>
+            </div>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Kids</a>
+          <router-link to="/catalog" class="menu-link">Kids</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>KIDS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>KIDS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>KIDS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>KIDS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Accessories</a>
+          <router-link to="/catalog" class="menu-link">Accessories</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>ACCESSORIES</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>ACCESSORIES</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>ACCESSORIES</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>ACCESSORIES</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Featured</a>
+          <router-link to="/catalog" class="menu-link">Featured</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>FEATURED</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>FEATURED</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>FEATURED</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>FEATURED</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
         <li class="menu-list">
-          <a href="catalog.html" class="menu-link">Hot Deals</a>
+          <router-link to="/catalog" class="menu-link">Hot Deals</router-link>
           <div class="catalog-droplist">
             <div class="category-droplist">
               <h6>HOT DEALS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
-                <li><a href="catalog.html">Blazers</a></li>
-                <li><a href="catalog.html">Denim</a></li>
-                <li><a href="catalog.html">Leggings/Pants</a></li>
-                <li><a href="catalog.html">Skirts/Shorts</a></li>
-                <li><a href="catalog.html">Accessories </a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
+                <li><router-link to="/catalog">Blazers</router-link></li>
+                <li><router-link to="/catalog">Denim</router-link></li>
+                <li><router-link to="/catalog">Leggings/Pants</router-link></li>
+                <li><router-link to="/catalog">Skirts/Shorts</router-link></li>
+                <li><router-link to="/catalog">Accessories </router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>HOT DEALS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>HOT DEALS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
               </ul>
             </div>
             <div class="category-droplist">
               <h6>HOT DEALS</h6>
               <ul>
-                <li><a href="catalog.html">Dresses</a></li>
-                <li><a href="catalog.html">Tops</a></li>
-                <li><a href="catalog.html">Sweaters/Knits</a></li>
-                <li><a href="catalog.html">Jackets/Coats</a></li>
+                <li><router-link to="/catalog">Dresses</router-link></li>
+                <li><router-link to="/catalog">Tops</router-link></li>
+                <li><router-link to="/catalog">Sweaters/Knits</router-link></li>
+                <li><router-link to="/catalog">Jackets/Coats</router-link></li>
               </ul>
             </div>
-            <a href="#"><div class="menu-sale"></div></a>
+            <router-link to="/catalog"
+              ><div class="menu-sale"></div
+            ></router-link>
           </div>
         </li>
       </ul>
