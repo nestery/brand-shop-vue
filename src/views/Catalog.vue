@@ -2,8 +2,8 @@
   <section class="catalog section">
     <div class="container container-catalog">
       <div class="catalog-left">
-        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
-          <h6 class="dropdown-header ">
+        <div class="dropdown-menu dropdown-menu-catalog">
+          <h6 @click="slideMenu" class="dropdown-header ">
             CATEGORY <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
           <ul class="dropdown-body">
@@ -48,8 +48,8 @@
             </li>
           </ul>
         </div>
-        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
-          <h6 class="dropdown-header ">
+        <div class="dropdown-menu dropdown-menu-catalog">
+          <h6 @click="slideMenu" class="dropdown-header ">
             BRAND <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
           <ul class="dropdown-body">
@@ -79,8 +79,8 @@
             </li>
           </ul>
         </div>
-        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
-          <h6 class="dropdown-header ">
+        <div class="dropdown-menu dropdown-menu-catalog">
+          <h6 @click="slideMenu" class="dropdown-header ">
             DESIGNER <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
           <ul class="dropdown-body">
@@ -114,6 +114,7 @@
             <div class="catalog-filter-container" id="size-filter">
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-XXS"
                   type="checkbox"
                   class="checkbox"
@@ -124,6 +125,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-XS"
                   type="checkbox"
                   class="checkbox"
@@ -134,6 +136,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-S"
                   type="checkbox"
                   class="checkbox"
@@ -144,6 +147,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-M"
                   type="checkbox"
                   class="checkbox"
@@ -154,6 +158,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-L"
                   type="checkbox"
                   class="checkbox"
@@ -164,6 +169,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-XL"
                   type="checkbox"
                   class="checkbox"
@@ -174,6 +180,7 @@
               </div>
               <div class="filter-checkbox">
                 <input
+                  v-model="checkedSizes"
                   id="filter-XXL"
                   type="checkbox"
                   class="checkbox"
@@ -265,6 +272,11 @@
 import Card from "../components/shared/Card";
 import { mapGetters } from "vuex";
 export default {
+  data() {
+    return {
+      checkedSizes: []
+    };
+  },
   components: {
     appCard: Card
   },
