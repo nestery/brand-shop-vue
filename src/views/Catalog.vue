@@ -1,8 +1,8 @@
 <template>
-  <section class="product section">
-    <div class="container container-product">
-      <div class="product-left">
-        <div class="dropdown-menu dropdown-menu-product">
+  <section class="catalog section">
+    <div class="container container-catalog">
+      <div class="catalog-left">
+        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
           <h6 class="dropdown-header ">
             CATEGORY <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
@@ -48,7 +48,7 @@
             </li>
           </ul>
         </div>
-        <div class="dropdown-menu dropdown-menu-product">
+        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
           <h6 class="dropdown-header ">
             BRAND <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
@@ -77,24 +77,9 @@
             <li class="dropdown-menu-item">
               <a href="#" class="dropdown-menu-link">Shirts</a>
             </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Shoes</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Shorts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Sweaters & Knits</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">T-Shirts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Tanks</a>
-            </li>
           </ul>
         </div>
-        <div class="dropdown-menu dropdown-menu-product">
+        <div @click="slideMenu" class="dropdown-menu dropdown-menu-catalog">
           <h6 class="dropdown-header ">
             DESIGNER <i class="fas fa-caret-down drop-down-arrow"></i>
           </h6>
@@ -108,43 +93,13 @@
             <li class="dropdown-menu-item">
               <a href="#" class="dropdown-menu-link">Denim</a>
             </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Hoodies & Sweatshirts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Jackets & Coats</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Pants</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Polos</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Shirts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Shoes</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Shorts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Sweaters & Knits</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">T-Shirts</a>
-            </li>
-            <li class="dropdown-menu-item">
-              <a href="#" class="dropdown-menu-link">Tanks</a>
-            </li>
           </ul>
         </div>
       </div>
-      <div class="product-right">
-        <div class="product-filter">
-          <div class="product-filter-tr">
-            <h6 class="product-filter-h6 mb-3">TRENDING NOW</h6>
+      <div class="catalog-right">
+        <div class="catalog-filter">
+          <div class="catalog-filter-tr">
+            <h6 class="catalog-filter-h6 mb-3">TRENDING NOW</h6>
             <div class="tr-filters">
               <a href="#" class="tr-filter">Bohemian</a>
               <a href="#" class="tr-filter tr-filter-delim">Floral</a>
@@ -154,9 +109,9 @@
               <a href="#" class="tr-filter">Bohemian</a>
             </div>
           </div>
-          <div class="product-filter-size">
-            <h6 class="product-filter-h6 mb-3">SIZE</h6>
-            <div class="product-filter-container" id="size-filter">
+          <div class="catalog-filter-size">
+            <h6 class="catalog-filter-h6 mb-3">SIZE</h6>
+            <div class="catalog-filter-container" id="size-filter">
               <div class="filter-checkbox">
                 <input
                   id="filter-XXS"
@@ -229,8 +184,8 @@
               </div>
             </div>
           </div>
-          <div class="product-filter-price">
-            <h6 class="product-filter-h6 mb-3">PRICE</h6>
+          <div class="catalog-filter-price">
+            <h6 class="catalog-filter-h6 mb-3">PRICE</h6>
             <div id="slider-3"></div>
             <div class="price-min-max">
               <p class="price-min-max-block">
@@ -254,7 +209,7 @@
             </div>
           </div>
         </div>
-        <div class="product-view" id="product-view">
+        <div class="catalog-view" id="catalog-view">
           <div class="sort-by">
             <span class="dropdown-label">Sort By</span>
             <select name="sort-by" id="sort-by">
@@ -264,16 +219,16 @@
               <option value="Rating">Rating</option>
             </select>
           </div>
-          <div class="product-show">
+          <div class="catalog-show">
             <span class="dropdown-label">Show</span>
-            <select name="show" id="show-product">
+            <select name="show" id="show-catalog">
               <option value="09">09</option>
               <option value="27">27</option>
               <option value="90">90</option>
             </select>
           </div>
         </div>
-        <div class="product-items">
+        <div class="catalog-items">
           <div class="catalog-cards" id="catalog">
             <app-card
               v-for="item in catalog"
@@ -282,7 +237,7 @@
             ></app-card>
           </div>
         </div>
-        <div class="product-pagination" id="pagination-block">
+        <div class="catalog-pagination" id="pagination-block">
           <div class="pagination bradius-3" id="pagination">
             <a href="#" class="pagination-arrow"
               ><i class="fas fa-angle-left" id="prevPage"></i
@@ -295,7 +250,7 @@
             ></a>
           </div>
           <button
-            class="btn-reverse btn-reverse-product bradius-3"
+            class="btn-reverse btn-reverse-catalog bradius-3"
             id="view-all"
           >
             View All
@@ -315,6 +270,24 @@ export default {
   },
   computed: {
     ...mapGetters(["catalogLoaded", "catalog"])
+  },
+  methods: {
+    slideMenu(event) {
+      //Уточняем, что клик был по кнопке выпадающего списка
+      const $dropList = event.target.nextElementSibling;
+      //Из-за схлопывания margin берём только margin-top
+      const marginTop = parseFloat(
+        window.getComputedStyle($dropList.children[0])["margin-top"]
+      );
+      const elemHeight = $dropList.children[0].offsetHeight + marginTop;
+      const dropListHeight = $dropList.children.length * elemHeight;
+
+      if ($dropList.style.height === "") {
+        $dropList.style.height = `${dropListHeight}px`;
+      } else {
+        $dropList.style.height = "";
+      }
+    }
   }
 };
 </script>
@@ -329,7 +302,7 @@ export default {
   margin-top: 50px;
 }
 
-.container-product {
+.container-catalog {
   display: flex;
   justify-content: space-between;
 }
@@ -394,20 +367,20 @@ export default {
   }
 }
 
-.product-right {
+.catalog-right {
   width: 846px;
 }
 
-.product-filter {
+.catalog-filter {
   display: flex;
   justify-content: space-between;
 }
 
-.product-filter-tr {
+.catalog-filter-tr {
   width: 26%;
 }
 
-.product-filter-h6 {
+.catalog-filter-h6 {
   font-size: 14px;
   color: #6f6e6e;
   font-weight: 900;
@@ -440,7 +413,7 @@ export default {
   border-right: 1px solid #dfdfdf;
 }
 
-.product-filter-container {
+.catalog-filter-container {
   display: flex;
   flex-direction: column;
   height: 50px;
@@ -448,7 +421,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.product-filter-size {
+.catalog-filter-size {
   width: 33%;
 }
 
@@ -501,11 +474,11 @@ export default {
   display: block;
 }
 
-.product-filter-price {
+.catalog-filter-price {
   width: 33%;
 }
 
-.product-filter-price {
+.catalog-filter-price {
   .ui-corner-all {
     border-radius: 50%;
   }
@@ -567,7 +540,7 @@ export default {
   font-size: 14px;
 }
 
-.product-view {
+.catalog-view {
   margin-top: 40px;
   padding-left: 10px;
   align-items: center;
@@ -601,7 +574,7 @@ export default {
   background: #fff;
 }
 
-#show-product {
+#show-catalog {
   padding: 0 10px;
   height: 32px;
   margin-left: -4px;
@@ -614,11 +587,11 @@ export default {
   background: #fff;
 }
 
-.product-show {
+.catalog-show {
   margin-left: 10px;
 }
 
-.product-pagination {
+.catalog-pagination {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -672,7 +645,7 @@ export default {
   border-radius: 3px;
 }
 
-.btn-reverse-product {
+.btn-reverse-catalog {
   padding: 9px 20px;
   width: 150px;
 }
