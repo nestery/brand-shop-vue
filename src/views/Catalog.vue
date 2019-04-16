@@ -193,7 +193,7 @@
           </div>
           <div class="catalog-filter-price">
             <h6 class="catalog-filter-h6 mb-3">PRICE</h6>
-            <div id="slider-3"></div>
+            <app-slider></app-slider>
             <div class="price-min-max">
               <p class="price-min-max-block">
                 <label for="price-min" class="price-label">$</label>
@@ -271,6 +271,8 @@
 <script>
 import Card from "../components/shared/Card";
 import { mapGetters } from "vuex";
+import VueSlider from "vue-slider-component";
+import "vue-slider-component/theme/default.css";
 export default {
   data() {
     return {
@@ -278,7 +280,8 @@ export default {
     };
   },
   components: {
-    appCard: Card
+    appCard: Card,
+    appSlider: VueSlider
   },
   computed: {
     ...mapGetters(["catalogLoaded", "catalog"])
